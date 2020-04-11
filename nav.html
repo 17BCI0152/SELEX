@@ -1,0 +1,510 @@
+<html>
+<head>
+  <title>SELEX</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <style>
+    .bg-dark {
+    background-color: #676f77 !important;
+}
+body{
+  background-color: #1fc8db;
+  background-image: linear-gradient(141deg, #c18d88 0%, #d6f2f5 51%, #b1dcba 75%);
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: white !important;
+  
+}
+/* .inner { 
+  background: rgba(211, 211, 211, 0.562) ; 
+} */
+
+table.ex1 {
+  border: 1px solid #ddd;
+  box-shadow:1px 1px 1px 1px darkgray;
+  border-color: #ddd;
+  
+}
+.lside{
+    text-align:center; 
+}
+table,th,td{
+    border: 1px solid #ddd;
+    box-shadow:1px 1px 1px 1px darkgray;
+    border-color: #ddd;
+}
+th,td{
+    padding:2px;
+    font-weight: bold;
+}
+.sh{
+    width:200px;
+}
+button{
+  height: 20px;
+width:44px;
+}
+.button {
+
+border: none;
+background-color: grey;
+/* padding: 15px 32px; */
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+/* margin: 4px 2px; */
+cursor: pointer;
+}
+#example2 {
+  box-sizing: border-box;
+  width: 660px;
+  height: 500px;
+  background-color:	#FFF8DC;
+  box-shadow:3px 3px 5px 6px #FFDEAD;
+  padding: 10px;  
+  border: 1px solid #ddd;
+  
+}
+#shapa {
+    position: absolute;
+    top: 18%;
+    left: 46%;
+    border: 1px solid gray;
+    padding: 10px;
+}
+body{
+  height:150%;
+}
+/* hover dropdown menus */
+@media only screen and (max-width: 991px) {
+    .navbar-hover .show > .dropdown-toggle::after{
+        transform: rotate(-90deg);
+    }
+}
+@media only screen and (min-width: 992px) {
+    .navbar-hover .collapse ul li{position:relative;}
+    .navbar-hover .collapse ul li:hover> ul{display:block}
+    .navbar-hover .collapse ul ul{position:absolute;top:100%;left:0;min-width:250px;display:none}
+    .navbar-hover .collapse ul ul ul{position:absolute;top:0;left:100%;min-width:250px;display:none}
+    /*.navbar-hover .collapse ul ul ul ul{position:absolute;top:0;left:-100%;min-width:250px;display:none;z-index:1}*/
+}
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark navbar-hover" style="
+    position: sticky !important;
+    top: 0;
+">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <img src="logo.png" height="40px" width="40px" style="margin-left: -14px;margin-top: -3px;">
+        <img src="title.png" class="navbar-brand" style="
+          width: 113px;
+          margin-left: -4px;
+          height: 40px;
+          margin-top: -2px;
+          ">
+      </div>
+    <div class="collapse navbar-collapse" id="navbarHover">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">System <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    RMS
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Status</a></li>
+                    <li><a class="dropdown-item" href="#">Data</a></li>
+                    <li><a class="dropdown-item" href="#">Logs</a></li>
+                    <li><a class="dropdown-item" href="#">Configuration</a></li>
+                    <li><a class="dropdown-item dropdown-toggle" href="#">Commands</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Submenu link</a></li>
+                            <li><a class="dropdown-item" href="#">Submenu link</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Config Restore</a></li>
+                    <li><a class="dropdown-item" href="#">Config Backup</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Monitors
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Data</a></li>
+                    <li><a class="dropdown-item" href="#">Configuration</a></li>
+                    <li><a class="dropdown-item dropdown-toggle" href="#">Commands</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Submenu link</a></li>
+                            <li><a class="dropdown-item" href="#">Submenu link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Monitor1
+              </a>
+              <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Data</a></li>
+                  <li><a class="dropdown-item" href="#">Configuration</a></li>
+                  <li><a class="dropdown-item dropdown-toggle" href="#">Commands</a>
+                      <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Submenu link</a></li>
+                          <li><a class="dropdown-item" href="#">Submenu link</a></li>
+                      </ul>
+                  </li>
+              </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Monitor2
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Data</a></li>
+                <li><a class="dropdown-item" href="#">Configuration</a></li>
+                <li><a class="dropdown-item dropdown-toggle" href="#">Commands</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Submenu link</a></li>
+                        <li><a class="dropdown-item" href="#">Submenu link</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Monitor3
+          </a>
+          <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Data</a></li>
+              <li><a class="dropdown-item" href="#">Configuration</a></li>
+              <li><a class="dropdown-item dropdown-toggle" href="#">Commands</a>
+                  <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Submenu link</a></li>
+                      <li><a class="dropdown-item" href="#">Submenu link</a></li>
+                  </ul>
+              </li>
+          </ul>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Monitor4
+        </a>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Data</a></li>
+            <li><a class="dropdown-item" href="#">Configuration</a></li>
+            <li><a class="dropdown-item dropdown-toggle" href="#">Commands</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Submenu link</a></li>
+                    <li><a class="dropdown-item" href="#">Submenu link</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Transmitters
+      </a>
+      <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Data</a></li>
+          <li><a class="dropdown-item" href="#">Configuration</a></li>
+          <li><a class="dropdown-item dropdown-toggle" href="#">Commands</a>
+              <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Submenu link</a></li>
+                  <li><a class="dropdown-item" href="#">Submenu link</a></li>
+              </ul>
+          </li>
+      </ul>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Diagnostics
+    </a>
+    <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Data</a></li>
+        <li><a class="dropdown-item" href="#">Configuration</a></li>
+        <li><a class="dropdown-item dropdown-toggle" href="#">Commands</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Submenu link</a></li>
+                <li><a class="dropdown-item" href="#">Submenu link</a></li>
+            </ul>
+        </li>
+    </ul>
+</li>
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Info
+  </a>
+  <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">Data</a></li>
+      <li><a class="dropdown-item" href="#">Configuration</a></li>
+      <li><a class="dropdown-item dropdown-toggle" href="#">Commands</a>
+          <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Submenu link</a></li>
+              <li><a class="dropdown-item" href="#">Submenu link</a></li>
+          </ul>
+      </li>
+  </ul>
+</li>
+  </ul>
+ </div>
+</nav>
+<img src="aero3.gif" style="
+    margin-left: 70%;
+    position: fixed;
+    margin-top: 0%;
+    z-index: 12;
+">
+<!-- <img src="https://www.animatedimages.org/data/media/71/animated-aeroplane-image-0006.gif" border="0" alt="animated-aeroplane-image-0006" width="10%;" style="position: fixed;margin-left: 32%;margin-top: 18%;z-index: 12;"> -->
+<div class="col-sm-12 row" style="
+    z-index: -1;
+">
+  <div class="col-sm-4">
+    <div class="card" style="top:20%;">
+      <div class="card-body">
+        <div class="lside" id="example2" style="position: relative;
+        left: 14%;
+        width: 66%;height:0%">
+          <table class="sh">
+              <tr><th colspan="4"></th></tr>
+              <tr>
+                  <th><button> </button></th>
+                  <th> Alert</th>
+                  <th><button type="button" onclick=""> </button></th>
+                  <th>Local</th>
+              </tr>
+          </table>
+          
+          <table style="text-align: center" class="sh">
+              <tr style="text-align: center;"><th colspan="3">Transmitters</th></tr>
+              <tr>
+                  <th>Tx1</th>
+                  <th style="border: hidden;"> </th>
+                  <th>Tx2</th>
+              </tr>
+              <tr>
+                  <td><button type="button" onclick=""></button></td>
+                  <td>Main</td>
+                  <td><button type="button" onclick=""></button></td>
+              </tr>
+              <tr>
+                  <td><button type="button" onclick=""></button></td>
+                  <td>Antenna</td>
+                  <td><button type="button" onclick=""></button></td>
+              </tr>
+              <tr>
+                  <td><button type="button" onclick=""></button></td>
+                  <td>Load</td>
+                  <td><button type="button" onclick=""></button></td>
+              </tr>
+              <tr>
+                  <td><button type="button" onclick=""></button></td>
+                  <td>Off</td>
+                  <td><button type="button" onclick=""></button></td>
+              </tr>
+          </table>
+          <table class="sh">
+              <tr>
+                  <th colspan="4"> Moniters</th>
+              </tr>
+              <tr>
+                  <th colspan="2.8">Integral</th>
+                  <th colspan="2"> Standby</th>
+              </tr>
+              <tr>
+                  <td><button></button>&nbsp;&nbsp;</td>
+                  <td colspan="2.5">Normal&nbsp;&nbsp;</td>
+                  <td><button></button></td>
+              </tr>
+              <tr>
+                  <td><button></button></td>
+                  <td colspan="2.5">Alarm</td>
+                  <td><button></button></td>
+              </tr>
+              <tr>
+                  <td><button type="button" onclick=""></button></td>
+                  <td colspan="2">Bypass</td>
+                  <td><button type="button" onclick=""></button></td>
+              </tr>
+          </table>
+          <table class="sh">
+              <tr>
+                  <th colspan="2">NFM</th>
+                  <th colspan="2"> FFM</th>
+              </tr>
+              <tr>
+                  <td><button></button></td>
+                  <td colspan="2.8">Normal</td>
+                  <td><button></button></td>
+              </tr>
+              <tr>
+                  <td><button></button></td>
+                  <td colspan="2.8">Alarm</td>
+                  <td><button></button></td>
+              </tr>
+              <tr>
+                  <td><button type="button" onclick=""></button></td>
+                  <td colspan="2">Bypass</td>
+                  <td><button type="button" onclick=""></button></td>
+              </tr>
+          </table>
+          <table class="sh" >
+              <tr><th>Int CRS Pos</th><td style="width: 30px;border-color:#ccc;"></td></tr>
+              <tr><th>Int CRS Width</th><td style="width: 30px;border-color:#ccc;"></td></tr>
+              <tr><th>Int CLR Pos</th><td style="width: 30px;border-color:#ccc;"></td></tr>
+              <tr><th>Int CLR Width</th><td style="width: 30px;border-color:#ccc;"></td></tr>
+              <tr><th>NFM Pos</th><td style="width: 30px;border-color:#ccc;"></td></tr>
+              <tr><th>FFM Pos</th><td style="width: 30px;border-color:#ccc;"></td></tr>
+          </table>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-8" >
+    <div class="card" style="top:20%;">
+      <div class="card-body">
+        <div class="inner"style="margin-left: 9%;" >
+          <button style="background-color: #ddd;width: 155px;height: 30px;font-weight: bold;">RMS/DME status</button>
+          <button style="background-color: #ddd;width: 215px;height: 30px;font-weight: bold;">Monitor/Transmitor status</button>
+          <div id="example2">
+              <div>
+           <table class="ex1" border="5">
+               <tr>
+                   <td style="height: 15px;width: 120px;"></td>
+               </tr>
+           </table>
+           
+           <table class="ex1" border="5">
+               
+               <br>
+               
+               <tr>
+                 <td>PMDTLogONLevel</td>
+                 <td style="width: 100px;border-color:#ccc;box-shadow:3px 3px 5px 6p black;">  </td>
+               </tr>
+           </table>
+           <br>
+           <table class="ex1" border="5">
+              
+               <tr>
+                   <td style="width: 30px;border-color:#ccc;"></td>
+                   <td style="width: 200px;border-color:#ccc;">  Maintainance Alert </td>
+                 </tr>
+                 <tr>
+                   <td style="width: 30px;border-color:#ccc;"></td>
+                   <td style="width: 200px;border-color:#ccc;box-shadow:3px 3px 5px 6p black;">  On battery </td>
+                 </tr>
+                 <tr>
+                   <td style="width: 30px;border-color:#ccc;"></td>
+                   <td style="width: 200px;border-color:#ccc;box-shadow:3px 3px 5px 6p black;">  AC Failure</td>
+                 </tr>
+
+               
+           </table>
+           <br>
+           <table class="ex1" border="5">
+              
+               <tr>
+                   <td style="width: 30px;border-color:#ccc;"></td>
+                   <td style="width: 200px;border-color:#ccc;">  Fault Analysis Running</td>
+                 </tr>
+                 <tr>
+                   <td style="width: 30px;border-color:#ccc;"></td>
+                   <td style="width: 200px;border-color:#ccc;box-shadow:3px 3px 5px 6p black;">  Local Control Failure </td>
+                 </tr>
+                 <tr>
+                   <td style="width: 30px;border-color:#ccc;"></td>
+                   <td style="width: 200px;border-color:#ccc;box-shadow:3px 3px 5px 6p black;">  Interlocked Off</td>
+                 </tr>
+                 <tr>
+                   <td style="width: 30px;border-color:#ccc;"></td>
+                   <td style="width: 200px;border-color:#ccc;box-shadow:3px 3px 5px 6p black;">  Remote Control Enabled</td>
+                 </tr>
+                 <tr>
+                   <td style="width: 30px;border-color:#ccc;">Off</td>
+                   <td style="width: 200px;border-color:#ccc;color: thistle;"> Auxilary </td>
+                 </tr>
+
+               
+           </table>
+           </div>
+           <p style="position: absolute;top: 13%;left: 46%;font-weight: bold;">DME</p>
+           <div id="shapa" border="5">
+               
+               <table class="ex1" border="5">
+              
+                   <tr>
+                       <td style="width: 30px;border-color:#ccc;"></td>
+                       <td style="width: 200px;border-color:#ccc;">  Communication Facult</td>
+                     </tr>
+               </table>
+               <br>
+               <table class="ex1" border="5">
+                   <tr>
+                       <td style="width: 30px;border-color:#ccc;"></td>
+                       <td style="width: 200px;border-color:#ccc;box-shadow:3px 3px 5px 6p black;">  On battery </td>
+                     </tr>
+               </table>
+               <br>
+               <table class="ex1" border="5">
+                   <tr>
+                       <td style="width: 30px;border-color:#ccc;"></td>
+                       <td style="width: 200px;border-color:#ccc;box-shadow:3px 3px 5px 6p black;">  AC Failure</td>
+                     </tr>
+   
+               </table>
+               <br>
+               <table class="ex1" border="5">
+                   <tr>
+                       <td style="width: 30px;border-color:#ccc;"></td>
+                       <td style="width: 200px;border-color:#ccc;box-shadow:3px 3px 5px 6p black;"> Hot StandBy</td>
+                     </tr>
+               </table>
+               <br><br>
+               <table class="ex1" border="5">
+                   <tr>
+                       <td style="width: 134px;border-color:#ccc;empty-cells: hide"></td>
+                       <td style="width: 40px;border-color:#ccc;box-shadow:3px 3px 5px 6p black;"> Alarm</td>
+                       <td style="width: 40px;border-color:#ccc;">Bypass</td>
+                     </tr>
+                     <tr>
+                       <td style="width: 70px;border-color:#ccc;">Main</td>
+                       <td style="width: 40px;border-color:#ccc;box-shadow:3px 3px 5px 6p black;"> </td>
+                       <td style="width: 40px;border-color:#ccc;"></td>
+                     </tr>
+                     <tr>
+                       <td style="width: 70px;border-color:#ccc;">StandBy</td>
+                       <td style="width: 40px;border-color:#ccc;box-shadow:3px 3px 5px 6p black;"></td>
+                       <td style="width: 40px;border-color:#ccc;"></td>
+                     </tr>
+               </table>
+               <br><br>
+               <table class="ex1" border="5">
+                   <tr>
+                       <td style="width: 134px;border-color:#ccc;empty-cells: hide"></td>
+                       <td style="width: 40px;border-color:#ccc;box-shadow:3px 3px 5px 6p black;"> On</td>
+                       <td style="width: 40px;border-color:#ccc;">On Antena</td>
+                     </tr>
+                     <tr>
+                       <td style="width: 70px;border-color:#ccc;">DME#1</td>
+                       <td style="width: 40px;border-color:#ccc;box-shadow:3px 3px 5px 6p black;"> </td>
+                       <td style="width: 40px;border-color:#ccc;"></td>
+                     </tr>
+                     <tr>
+                       <td style="width: 70px;border-color:#ccc;">DME#2</td>
+                       <td style="width: 40px;border-color:#ccc;box-shadow:3px 3px 5px 6p black;"></td>
+                       <td style="width: 40px;border-color:#ccc;"></td>
+                     </tr>
+               </table>
+           </div>
+          </div>
+         </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
